@@ -1,0 +1,147 @@
+.root {
+  colorsPrimary: #455a64;
+  colorsPrimaryDark: #1c313a;
+  colorsPrimaryLight: #718792;
+  colorsSecondary: #c43e00;
+  colorsSecondaryDark: #a33400;
+  colorsSecondaryLight: #ff8f1f;
+  colorsSucces: #1B5E20; 
+  colorsError: #B71C1C; 
+  colorsText: #FFF;
+
+  -fx-background-color: #0D181C;
+}
+
+.text {
+  -fx-fill: colorsText;
+}
+
+.text.title {
+  -fx-font-size: 24;
+  -fx-font-weight: bold;
+}
+
+.link > .text {
+  -fx-fill: colorsSecondary;
+  -fx-cursor: hand;
+}
+
+.button {
+  -fx-background-color: colorsPrimaryLight;
+  -fx-cursor: hand;
+}
+
+.button:hover, .button:focused {
+  -fx-background-color: colorsPrimary;
+}
+
+.button.submit {
+  -fx-background-color: colorsSecondary;
+}
+
+.button.submit:hover, .button.submit:focused {
+  -fx-background-color: colorsSecondaryDark;
+}
+
+.search-bar {
+  -fx-padding: 50 25 50 0;
+}
+
+.scroll-pane {
+  -fx-background-color: #0D181C;
+  -fx-padding: 0 0 20 0;
+}
+
+.scroll-pane > .viewport {
+  -fx-background-color: transparent;
+}
+
+.menu-bar {
+  -fx-background-color: transparent;
+  -fx-padding: 10 0 0 0;
+}
+
+.menu-bar > .navigator-controls {
+  -fx-padding: 0 0 0 10;
+}
+
+.menu-bar > .app-controls {
+  -fx-padding: 0 10 0 0;
+}
+
+.form-group {
+  -fx-spacing: 5px;
+}
+
+.input-group {
+  -fx-spacing: 5px;
+}
+
+.button-group {
+  -fx-spacing: 5px;
+}
+
+.tag-container, .tag-container > .tag-group {
+  -fx-spacing: 5px;
+}
+
+.tag-container > .font-icon-button > .font-icon > .text {
+  -fx-fill: colorsSecondary;
+}
+
+.media-card-container {
+  -fx-hgap: 18px;
+  -fx-vgap: 36px;
+}
+
+.media-card {
+  -fx-background-color: colorsPrimary;
+  -fx-cursor: hand;
+}
+
+.modal {
+  -fx-background-color: colorsPrimaryDark;
+  -fx-view-order: -1;
+}
+
+.modal > .modal-content {
+  -fx-spacing: 10px;
+}
+
+.media-info {
+  -fx-vgap: 16px;
+  -fx-padding: 10 10 0 10;
+}
+
+.tag-group {
+  -fx-spacing: 10px;
+}
+
+.media-container {
+  -fx-padding: 0 0 10 0;
+}
+
+.media-container .slider {
+  -fx-padding: 0 10 0 10;
+}
+
+.season-info {
+  -fx-vgap: 25px;
+}
+
+.season-info > .link-group {
+  -fx-hgap: 16px;
+}
+
+.season-info > .link-group > .link > .text {
+  -fx-fill: colorsText;
+}
+
+.season-info > .link-group > .link.toggled  > .text {
+  -fx-fill: colorsSecondary;
+}
+
+
+
+
+

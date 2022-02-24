@@ -1,0 +1,25 @@
+.font-icon-button {
+  -fx-background-color: transparent;
+  -fx-cursor: hand;
+}
+
+.font-icon-button:hover,
+.font-icon-button:focused {
+  -fx-background-color: transparent;
+}
+
+.font-icon-button:hover > .font-icon > .text {
+  -fx-fill: colorsPrimary;
+}
+
+.font-icon-button.close:hover > .font-icon > .text {
+  -fx-fill: colorsError;
+}
+
+.font-icon-button.toggled > .font-icon > .text {
+  -fx-fill: colorsSecondary;
+}
+
+.font-icon-button.toggled:hover > .font-icon > .text {
+  -fx-fill: colorsSecondaryDark;
+}

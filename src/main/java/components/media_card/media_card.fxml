@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.text.Text?>
+
+
+<fx:root type="javafx.scene.layout.VBox" maxHeight="-Infinity" maxWidth="-Infinity" alignment="CENTER" styleClass="media-card" onMouseClicked="#handleClick" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <fx:define>
+    <Double fx:id="width" fx:value="200" />
+  </fx:define>
+
+  <ImageView fx:id="imageBox" styleClass="image-box" fitWidth="$width" preserveRatio="true" />
+  <TextFlow textAlignment="CENTER">
+    <Text styleClass="text" text="$controller.title" />
+  </TextFlow>
+</fx:root>

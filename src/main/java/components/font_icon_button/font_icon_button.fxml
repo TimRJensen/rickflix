@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import components.font_icon.FontIcon?>
+
+<fx:root type="javafx.scene.control.Button" styleClass="font-icon-button" stylesheets="@ font_icon_button.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <graphic>
+        <FontIcon fx:id="fontIcon" type="$controller.type" size="$controller.size" />
+    </graphic>
+</fx:root>

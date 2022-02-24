@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import components.input.Input?>
+<?import components.input.Types?>
+<?import components.account_dropdown.AccountDropdown?>
+<?import components.media_container.MediaContainer?>
+<?import components.media_info.MediaInfo?>
+<?import components.season_info.SeasonInfo?>
+
+<GridPane fx:id="view" fx:controller="views.watch.Watch" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+  <fx:define>
+    <Double fx:value="480" fx:id="mediaViewHeight" />
+    <Double fx:value="720" fx:id="mediaViewWidth" />
+    <Double fx:value="400" fx:id="inputWidth" />
+    <Types fx:value="TEXT" fx:id="inputTextType" />
+  </fx:define>
+
+  <columnConstraints>
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints vgrow="NEVER" />
+    <RowConstraints vgrow="ALWAYS" valignment="TOP" />
+  </rowConstraints>
+  <StackPane styleClass="search-bar" GridPane.rowIndex="0">
+    <Input type="$inputTextType" minWidth="$inputWidth" maxWidth="$inputWidth" promptText="search movies, series, categories, etc." onKeyPressed="#handleSearch" StackPane.alignment="CENTER" />
+    <AccountDropdown StackPane.alignment="CENTER_RIGHT" />
+  </StackPane>
+  <ScrollPane hbarPolicy="NEVER" fitToHeight="true" fitToWidth="true" GridPane.rowIndex="1">
+    <StackPane alignment="TOP_CENTER">
+      <GridPane style="-fx-border: green;">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="ALWAYS" />
+        </rowConstraints>
+        <MediaContainer fitHeight="$mediaViewHeight" fitWidth="$mediaViewWidth" mediaData="$controller.mediaData" GridPane.rowIndex="0" />
+        <MediaInfo styleClass="media-info" maxWidth="$mediaViewWidth" mediaData="$controller.mediaData" closeable="false" GridPane.rowIndex="1" />
+        <SeasonInfo styleClass="season-info" mediaData="$controller.mediaData" seasonData="$controller.seasonData" GridPane.rowIndex="2" />
+      </GridPane>
+    </StackPane>
+  </ScrollPane>
+</GridPane>

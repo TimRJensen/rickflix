@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.ImageView?>
+<?import components.font_icon_button.FontIconButton?>
+<?import components.media_info.MediaInfo?>
+
+<fx:root type="javafx.scene.layout.FlowPane" styleClass="modal" alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <fx:define>
+    <Double fx:id="width" fx:value="200" />
+  </fx:define>
+
+  <HBox fx:id="content" styleClass="modal-content">
+    <StackPane>
+      <ImageView fx:id="imageBox" fitWidth="$width" pickOnBounds="true" preserveRatio="true" />
+      <FontIconButton type="play-alt" size="48" onAction="#handleRedirect" />
+    </StackPane>
+    <MediaInfo styleClass="media-info" mediaData="$controller.mediaData" closeable="true" onClose="#handleClose" HBox.hgrow="ALWAYS" />
+  </HBox>
+</fx:root>

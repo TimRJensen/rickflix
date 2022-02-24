@@ -1,0 +1,14 @@
+.font-icon {
+  -fx-alignment: center-left;
+  -fx-font-family: FontAwesome;
+  -fx-font-size: 16px;
+}
+
+.font-icon > .text {
+  -fx-fill: colorsPrimaryLight;
+}
+
+
+
+
+

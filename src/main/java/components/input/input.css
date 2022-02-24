@@ -1,0 +1,12 @@
+.input {
+  -fx-background-color: colorsPrimary;
+  -fx-text-fill: colorsText;
+}
+
+.input:focused {
+  -fx-background-color: colorsPrimaryLight;
+}
+
+.input.success {
+  -fx-background-color: colorsSucces;
+}

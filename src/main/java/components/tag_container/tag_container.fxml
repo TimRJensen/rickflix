@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import components.font_icon_button.FontIconButton?>
+
+<fx:root type="javafx.scene.layout.HBox" styleClass="tag-container" alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <FontIconButton type="arrow-circle-left" size="24" onAction="#handlePrev" />
+  <HBox fx:id="tagGroup" styleClass="tag-group" alignment="CENTER" />
+  <FontIconButton type="arrow-circle-right" size="24" onAction="#handleNext" />
+</fx:root>

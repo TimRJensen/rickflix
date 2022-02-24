@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.control.Slider?>
+<?import components.font_icon_button.FontIconButton?>
+
+<fx:root type="javafx.scene.layout.StackPane" styleClass="media-container" alignment="BOTTOM_CENTER" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+  <MediaView fx:id="mediaView" preserveRatio="true" fitHeight="$controller.fitHeight" fitWidth="$controller.fitWidth" StackPane.alignment="CENTER" />
+  <FlowPane alignment="BOTTOM_CENTER" rowValignment="CENTER">
+    <FontIconButton fx:id="mediaPlaybackAction" type="play" size="18" disable="true" onAction="#handleMediaControl" />
+    <Slider fx:id="mediaProgress" prefWidth="${controller.fitWidth*0.9}" disable="true" opacity="0.5" onValueChange="#handleMediaProgressChange" />
+    <FontIconButton fx:id="mediaViewAction" type="expand" size="18" onAction="#handleMediaViewControl" />
+  </FlowPane>
+</fx:root>

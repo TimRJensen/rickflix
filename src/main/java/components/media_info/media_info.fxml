@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
+<!-- <?import javafx.scene.text.TextFlow?> -->
+<?import javafx.scene.text.Text?>
+<?import components.font_icon_button.FontIconButton?>
+
+<fx:root type="javafx.scene.layout.GridPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="ALWAYS" />
+    <ColumnConstraints fillWidth="false" hgrow="NEVER" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints />
+    <RowConstraints />
+    <RowConstraints />
+    <!-- <RowConstraints /> -->
+  </rowConstraints>
+  <HBox fx:id="tagGroup" styleClass="tag-group" GridPane.columnIndex="0" alignment="CENTER_LEFT" />
+  <HBox GridPane.columnIndex="1" alignment="CENTER">
+    <FontIconButton fx:id="favoriteControl" type="favorite" size="16" onAction="#handleFavoriting" />
+    <FontIconButton fx:id="closeControl" type="close" size="18" visible="$controller.closeable" managed="$controller.closeable" />
+  </HBox>
+  <Text styleClass="text, title" text="$controller.title" GridPane.rowIndex="1" />
+  <Text styleClass="text" text="$controller.content" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+  <!-- <TextFlow fx:id="linkGroup" GridPane.columnSpan="2" GridPane.rowIndex="3" /> -->
+</fx:root>

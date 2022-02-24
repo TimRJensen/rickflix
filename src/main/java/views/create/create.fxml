@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import components.input.Input?>
+<?import views.create.FormKeys?>
+
+<StackPane fx:id="view" alignment="CENTER" fx:controller="views.create.Create" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <fx:define>
+      <Double fx:value="200" fx:id="inputGroupWidth" />
+      <FormKeys fx:value="EMAIL" fx:id="inputEmailKey" />
+      <FormKeys fx:value="PASSWORD" fx:id="inputPasswordKey" />
+      <FormKeys fx:value="CONFIRMED_PASSWORD" fx:id="inputConfirmedPasswordKey" />
+      <FormKeys fx:value="NAME" fx:id="inputNameKey" />
+      <FormKeys fx:value="COUNTRY" fx:id="inputCountryKey" />
+   </fx:define>
+
+   <VBox fx:id="content" styleClass="form-group" maxHeight="-Infinity" minWidth="$inputGroupWidth" maxWidth="$inputGroupWidth">
+      <VBox fx:id="inputGroup" styleClass="input-group">
+         <Input type="email" key="$inputEmailKey" formData="$controller.formData" validations="$controller.validations" />
+         <Input fx:id="inputPassword" type="password" key="$inputPasswordKey" formData="$controller.formData" validations="$controller.validations" />
+         <Input type="password" key="$inputConfirmedPasswordKey" formData="$controller.formData" validations="$controller.validations" dependency="$inputPassword" />
+         <Input type="text" key="$inputNameKey" formData="$controller.formData" validations="$controller.validations" />
+         <Input type="text" key="$inputCountryKey" formData="$controller.formData" validations="$controller.validations"></Input>
+      </VBox>
+      <HBox styleClass="button-group" alignment="CENTER_RIGHT">
+         <Button text="submit" styleClass="submit" defaultButton="true" onAction="#handleSubmit" />
+         <Button text="back" onAction="#handleCancel" />
+      </HBox>
+   </VBox>
+</StackPane>

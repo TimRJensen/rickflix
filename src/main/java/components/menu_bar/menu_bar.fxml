@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import components.navigator_controls.NavigatorControls?>
+<?import components.app_controls.AppControls?>
+
+<fx:root type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <NavigatorControls styleClass="navigator-controls" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS" viewOrder="-1" />
+    <AppControls styleClass="app-controls" alignment="CENTER_RIGHT" viewOrder="-1" />
+</fx:root>

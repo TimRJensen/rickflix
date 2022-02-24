@@ -1,0 +1,14 @@
+.tag {
+  -fx-background-color: colorsPrimaryLight;
+  -fx-background-radius: 4px;
+  -fx-cursor: hand;
+  -fx-padding: 0 10 0 10;
+}
+
+.tag:hover {
+  -fx-background-color: colorsPrimary;
+}
+
+.tag > .font-icon > .text {
+  -fx-fill: colorsText;
+}

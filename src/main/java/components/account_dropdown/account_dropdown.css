@@ -1,0 +1,37 @@
+.menu-button {
+    -fx-background-color: colorsPrimary;
+    -fx-background-radius: 50%;
+    -fx-cursor: hand;
+}
+
+.menu-button:hover, .menu-button:focused {
+    -fx-background-color: colorsPrimaryLight;
+} 
+
+.menu-button > .label > .text {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+}
+  
+.menu-button > .arrow-button {
+    -fx-padding: 0;
+}
+
+.menu-button > .arrow-button > .arrow {
+    -fx-padding: 0;
+}
+
+.context-menu {
+    -fx-background-color: colorsPrimaryLight;
+    -fx-background-radius: 2px;
+    -fx-padding: 2px 0 2px 0;
+}
+
+.menu-item {
+    -fx-padding: 5px 40px 5px 5px;
+    -fx-cursor: hand;
+}
+
+.menu-item:hover, .menu-item:focused {
+    -fx-background-color: colorsPrimary;
+}

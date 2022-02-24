@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import components.font_icon_button.FontIconButton?>
+
+<fx:root type="javafx.scene.layout.VBox" styleClass="modal" alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <GridPane fx:id="content" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints fillWidth="false" hgrow="NEVER" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="NEVER" />
+            <RowConstraints vgrow="ALWAYS" />
+        </rowConstraints>
+        <FontIconButton fx:id="closeControl" type="close" size="18" GridPane.columnIndex="1" onAction="#handleClose" />
+        <VBox fx:id="hintGroup" alignment="CENTER" GridPane.rowIndex="1" GridPane.columnSpan="2" />
+    </GridPane>
+</fx:root>

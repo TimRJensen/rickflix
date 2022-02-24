@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+
+<fx:root type="javafx.scene.control.MenuButton" alignment="CENTER" minHeight="48" minWidth="48" maxHeight="48" maxWidth="48" wrapText="true" stylesheets="@ account_dropdown.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <items>
+        <MenuItem text="Profile" onAction="#handleEdit" />
+        <MenuItem text="Favorites" onAction="#handleFavorites" />
+        <MenuItem text="Logout" onAction="#handleLogout" />
+    </items>
+</fx:root>

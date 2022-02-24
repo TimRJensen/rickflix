@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import components.media_card_container.MediaCardContainer?>
+
+<fx:root type="javafx.scene.layout.GridPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+    <fx:define>
+        <Double fx:value="0.75" fx:id="widthRatio" />
+    </fx:define>
+
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" fillWidth="false" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="SOMETIMES" maxHeight="-Infinity" />
+        <RowConstraints vgrow="SOMETIMES" fillHeight="false" />
+    </rowConstraints>
+    <FlowPane fx:id="linkGroup" styleClass="link-group" alignment="TOP_CENTER" />
+    <MediaCardContainer fx:id="mediaCardContainer" styleClass="media-card-container" widthRatio="$widthRatio" mediaData="$controller.episodes" GridPane.rowIndex="1" />
+</fx:root>

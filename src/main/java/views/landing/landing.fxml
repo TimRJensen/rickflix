@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import java.lang.Integer?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import components.input.Input?>
+<?import components.tag_container.TagContainer?>
+<?import components.media_card_container.MediaCardContainer?>
+<?import components.account_dropdown.AccountDropdown?>
+
+<GridPane fx:id="view" alignment="TOP_CENTER" vgap="10.0" fx:controller="views.landing.Landing" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <fx:define>
+
+    <Double fx:value="400" fx:id="inputWidth" />
+    <Integer fx:value="10" fx:id="tagContainerTagsLimit" />
+    <Double fx:value="0.75" fx:id="mediaCardContainerWidthRatio" />
+  </fx:define>
+  <columnConstraints>
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints vgrow="NEVER" valignment="CENTER" />
+    <RowConstraints vgrow="NEVER" />
+    <RowConstraints vgrow="SOMETIMES" />
+  </rowConstraints>
+  <StackPane styleClass="search-bar" GridPane.rowIndex="0">
+    <Input type="text" minWidth="$inputWidth" maxWidth="$inputWidth" promptText="search movies, series, categories, etc." onKeyPressed="#handleSearch" StackPane.alignment="CENTER" />
+    <AccountDropdown StackPane.alignment="CENTER_RIGHT" />
+  </StackPane>
+  <TagContainer data="$controller.tagData" tagsLimit="$tagContainerTagsLimit" GridPane.rowIndex="1" />
+  <ScrollPane GridPane.rowIndex="2" hbarPolicy="NEVER" fitToWidth="true">
+    <StackPane fx:id="section" alignment="TOP_CENTER">
+      <MediaCardContainer styleClass="media-card-container" widthRatio="$mediaCardContainerWidthRatio" mediaData="$controller.mediaData" root="$section" />
+    </StackPane>
+  </ScrollPane>
+</GridPane>
